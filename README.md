@@ -1,38 +1,36 @@
 <div align="center">
   <img src="assets/saqta-icon.svg" alt="SAQTA" width="72" height="72" />
   <h1>SAQTA</h1>
-  <p>Локальный криптографический пакет, CLI-утилита и 5-этапный анализатор шифров и уязвимостей.</p>
-  <p><em>Local cryptographic suite, CLI tool, and 5-stage cipher & vulnerability analyzer.</em></p>
+  <p>Local cryptographic suite, CLI utility, and 5-stage cipher & vulnerability analyzer.</p>
 </div>
 
 ---
 
-## Скачать / Download (Windows x64)
+## Download (Windows x64)
 
-Перейдите в раздел **[Releases](https://github.com/moonshinelxv/saqta/releases/latest)**:
+Go to **[Releases](https://github.com/moonshinelxv/saqta/releases/latest)**:
 
-- **Графическое приложение (Desktop GUI):** скачайте `SAQTA-Desktop-v0.1.0-windows-x64.zip`, распакуйте архив в любую папку и запустите `saqta-desktop.exe` (рядом должен находиться `WebView2Loader.dll`).
-- **Терминальная утилита (CLI):** скачайте `saqta-cli-v0.1.0-windows-x64.exe` (запуск из PowerShell/CMD: `saqta-cli-v0.1.0-windows-x64.exe --help`).
-- **Проверка целостности:** сравните хэш-суммы SHA-256 с файлом `SHA256SUMS.txt` из того же релиза:
+- **Desktop App (GUI):** download `SAQTA-Desktop-v0.1.0-windows-x64.zip`, extract it to any folder, and run `saqta-desktop.exe` (keep `WebView2Loader.dll` in the same folder).
+- **Command-Line Tool (CLI):** download `saqta-cli-v0.1.0-windows-x64.exe` and run from PowerShell or CMD (`saqta-cli-v0.1.0-windows-x64.exe --help`).
+- **Verify Integrity:** check SHA-256 hashes against `SHA256SUMS.txt` attached to the release:
   ```powershell
   Get-FileHash SAQTA-Desktop-v0.1.0-windows-x64.zip -Algorithm SHA256
   ```
 
 ---
 
-## Возможности / Features
+## Features
 
-- **Анализ и аудит (5 этапов):** проверка форматов и контейнеров (`PNG`, `PDF`, `ZIP`, `PEM`, `JWT`, `OpenSSL Salted__`, `PHC`-хэши), статистика энтропии и тесты NIST SP 800-22, поиск уязвимостей (утечки блоков `ECB`, `JWT alg:none`, слабые ключи `RSA`), вероятностная оценка и каскадная авто-расшифровка классических шифров и многослойных кодировок (`RU` + `EN`).
-- **Шифрование и генерация ключей (107 алгоритмов):** `AES-GCM`, `ChaCha20-Poly1305`, `Ascon`, российский `ГОСТ` (`Кузнечик`, `Магма`, `Стрибог`), постквантовые алгоритмы `ML-KEM` / `ML-DSA`, асимметричные схемы (`RSA`, `ECIES`, `Ed25519`, `ElGamal`, `Paillier`), хэши, KDF и классические шифры.
-- **Расшифровка:** выборочный режим (с точным ключом, маской или довычислением слабых параметров) и автоматический каскад для текстовых кодировок и классических шифров.
-- **100% локально:** все операции выполняются офлайн на вашем устройстве, данные никуда не отправляются.
+- **Analyze & Audit (5 Stages):** container and format inspection (`PNG`, `PDF`, `ZIP`, `PEM`, `JWT`, `OpenSSL Salted__`, `PHC` password hashes), Shannon/min-entropy & NIST SP 800-22 statistics, vulnerability checks (`ECB` block leaks, `JWT alg:none`, weak `RSA` parameters), probabilistic classification, and cascade recovery for classical ciphers and multi-layer encodings.
+- **Encrypt & Keygen (107 Algorithms):** `AES-GCM`, `ChaCha20-Poly1305`, `Ascon`, `GOST` (`Kuznyechik`, `Magma`, `Streebog`), post-quantum `ML-KEM` / `ML-DSA`, asymmetric cryptography (`RSA`, `ECIES`, `Ed25519`, `ElGamal`, `Paillier`), hashes, KDFs, classical ciphers, and encodings.
+- **Decrypt (Selective & Auto-Cascade):** decrypt with an exact key, partial key mask, or weak-parameter computation, or run automated cascade unwrapping across nested encodings and classical ciphers.
+- **Bilingual Inside the App:** full English and Russian UI and text-analysis oracle.
+- **100% Local Execution:** everything runs offline on your machine via the native Rust engine with zero telemetry or network uploads.
 
-> **Важно:** SAQTA не является «магическим взломщиком» для корректно настроенных современных шифров (`AES-256`, `ChaCha20`, `ГОСТ`, `RSA-2048+`) без ключа — программа помогает определить тип данных, выявить ошибки реализации/слабые параметры, расшифровать классические шифры и надёжно защищать файлы.
+> **Honest Scope:** SAQTA cannot magically crack properly configured modern encryption (`AES-256`, `ChaCha20`, `GOST`, `RSA-2048+`) without a key. It is designed to identify formats/ciphers, uncover implementation weaknesses, recover classical ciphers and encodings, and protect files with modern cryptography.
 
 ---
 
-## Примечание / Notice
-
-Этот репозиторий предназначен исключительно для публикации официальных сборок и обновлений SAQTA. Исходный код проекта закрыт (`© 2026 moonshinelxv`, см. [LICENSE](LICENSE)).
+## Distribution
 
 This public repository distributes official compiled releases and updates for SAQTA only. Source code is proprietary and closed (`© 2026 moonshinelxv`, see [LICENSE](LICENSE)).
