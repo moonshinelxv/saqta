@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect x="8" y="8" width="496" height="496" rx="108" fill="#0B0D11" stroke="#232A36" stroke-width="6"/>
+  <circle cx="256" cy="256" r="158" stroke="#CCA65E" stroke-width="22"/>
+  <circle cx="256" cy="256" r="118" stroke="#2F3848" stroke-width="4"/>
+  <!-- Shanyraq Kuldireuish Lattice (3 horizontal & 3 vertical parallel structural ribs) -->
+  <line x1="168" y1="208" x2="344" y2="208" stroke="#CCA65E" stroke-width="14" stroke-linecap="round"/>
+  <line x1="142" y1="256" x2="370" y2="256" stroke="#CCA65E" stroke-width="14" stroke-linecap="round"/>
+  <line x1="168" y1="304" x2="344" y2="304" stroke="#CCA65E" stroke-width="14" stroke-linecap="round"/>
+  <line x1="208" y1="168" x2="208" y2="344" stroke="#CCA65E" stroke-width="14" stroke-linecap="round"/>
+  <line x1="256" y1="142" x2="256" y2="370" stroke="#CCA65E" stroke-width="14" stroke-linecap="round"/>
+  <line x1="304" y1="168" x2="304" y2="344" stroke="#CCA65E" stroke-width="14" stroke-linecap="round"/>
+  <!-- Center intersection nodes & steppe sky-blue core ring -->
+  <circle cx="256" cy="256" r="22" fill="#0B0D11" stroke="#3A94B8" stroke-width="8"/>
+  <circle cx="256" cy="256" r="7" fill="#3A94B8"/>
+</svg>
